@@ -1,8 +1,29 @@
-## Data Gathering And Analysis
+## Atlassian Marketplace Time Tracking Apps Analytics
 
-This is a project for data crawling (given a web link) and exploring the gathered data to answer some data analysis questions.
+This GitHub repository contains code for scraping data from the Atlassian Marketplace for apps in the Time Tracking category, followed by performing analytics on the gathered data to answer specific questions.
+
+### Project Overview
+
+The project consists of two main steps:
+
+1. **Gathering Data:**
+   - Crawling the information of all the apps from [Atlassian Marketplace Time Tracking category](https://marketplace.atlassian.com/search?category=Time%20tracking&product=jira).
+   - Parsing and structuring the data in a CSV file for further analysis.
+
+2. **Analyzing Data:**
+   - Understanding the distribution of the number of installs for the plugins in the time tracking category.
+   - Investigating the potential relationship between the number of installs and the price of the plugins.
+   - Identifying predictive features for the number of installs and proposing suitable methods for prediction.
 
 **Stack**: Python, Selenium
+
+### Repository Structure
+
+- `data.csv`: The CSV file with the scraped and structured data.
+- `scraper.py`: Python script for data scraping.
+- `README.md`: Provides an overview of the project and instructions for usage.
+- `requirements.txt`: Lists the dependencies required for running the code.
+- [Colab Notebook](https://colab.research.google.com/drive/1bXFaXM6V7ufEIINa8l-bsFDn2b64nudW?usp=sharing#scrollTo=DEkeu-8SP5am): Contains the data analysis.
 
 ### Explaining the Dataset
  Column        | Meaning        
@@ -32,6 +53,10 @@ The data has been intentionally inserted into the CSV file without modification.
 However, we need to preprocess data for analysis. Those steps have been performed in the notebook.  
 
 ### How to Build
+##### Clone the Repository
+`git clone https://github.com/golamSaroar/exploring_time_tracking_apps.git`  
+`cd exploring_time_tracking_apps`
+
 ##### Installing Requirements
 The only dependency of this project is *Selenium*. However, let's setup a virtual env for the project.  
 Create a virtual environment either using [venv](https://docs.python.org/3/tutorial/venv.html) or [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). We will use python version 3.8.x 
